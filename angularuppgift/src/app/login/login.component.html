@@ -1,0 +1,39 @@
+<app-header></app-header>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="container section ">
+        <div class="row">
+            <div class="input-field col s6 section">
+                <input [ngClass]="{ 'has-error' : isSubmitted && formControls.email.errors }" formControlName="email"
+                    id="email" type="email" class="validate">
+                <label for="email">Email</label>
+                <span class="helper-text" data-error="Incorrect email address!">
+                    <div *ngIf="isSubmitted && formControls.email.errors" class="text-danger">
+                        <div *ngIf="formControls.email.errors.required">
+                            Email address is required!
+                        </div>
+                    </div>
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input [ngClass]="{ 'has-error' : isSubmitted && formControls.password.errors }"
+                    formControlName="password" id="password" type="password" class="validate">
+                <label for="password">Password</label>
+                <span class="helper-text">
+                    <div *ngIf="isSubmitted && formControls.password.errors" class="text-danger">
+                        <div *ngIf="formControls.password.errors.required">
+                            Password is required!
+                        </div>
+                    </div>
+                </span>
+            </div>
+        </div>
+
+        <button class="btn waves-effect waves-light submit blue-grey" type="submit" value="Login">Login
+            <i class="material-icons right">send</i>
+        </button>
+
+    </div>
+</form>

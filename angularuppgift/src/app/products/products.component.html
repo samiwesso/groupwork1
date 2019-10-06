@@ -1,0 +1,33 @@
+<app-header></app-header>
+<span></span>
+
+<section id="product-section">
+
+  <div class="container">
+
+    <table class="product-table">
+
+      <tbody>
+        <tr class="table-row" *ngFor="let product of products">
+          <td>
+            
+            <img class="product-img" src="{{ product.img }}" alt="">
+          </td>
+          <td>
+              <h6 class="product-title">{{ product.title }}</h6>
+            <p class="product-desc"><strong>Description:</strong>{{ product.text }}</p>
+          </td>
+          <td>
+            <p class="product-price">{{ product.price }} kr</p>
+            <button (click)="addItem()" class="add-item btn z-depth-0">Add</button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+
+
+</section>

@@ -1,0 +1,31 @@
+
+
+#product-section {
+
+    padding-top: 4rem;
+
+    table {
+        
+        border-top: solid 1px rgb(230, 230, 230);
+
+        tbody {
+            tr:hover {
+                .product-img {
+                    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+        
+        .product-img {
+            max-height: 100px;
+        }
+        .product-desc {
+            max-width: 300px;
+            strong {
+                display: block;
+            }
+        }
+
+    }
+
+}

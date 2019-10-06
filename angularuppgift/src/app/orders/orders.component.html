@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<section id="order-section">
+
+  <div class="container">
+
+    <h5 class="order-title">Your Orders</h5>
+
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th>Order number</th>
+          <th>Articles</th>
+          <th>Date</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td><i class="fas fa-hashtag"></i> {{ product._id }}</td>
+          <td>{{ product.title }} <img class="article-img" src="{{ product.img }}" alt=""></td>
+          <td>{{ product.date }}</td>
+          <td>{{ product.price }} kr</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</section>

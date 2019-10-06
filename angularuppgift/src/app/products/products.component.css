@@ -1,0 +1,25 @@
+#product-section {
+  padding-top: 4rem;
+}
+
+#product-section table {
+  border-top: solid 1px #e6e6e6;
+}
+
+#product-section table tbody tr:hover .product-img {
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#product-section table .product-img {
+  max-height: 100px;
+}
+
+#product-section table .product-desc {
+  max-width: 300px;
+}
+
+#product-section table .product-desc strong {
+  display: block;
+}
+/*# sourceMappingURL=products.component.css.map */

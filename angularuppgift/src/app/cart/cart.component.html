@@ -1,0 +1,31 @@
+  <!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content grey-text">
+      <h3>Cart Info</h3>
+      <table class="order-table">
+          <thead>
+            <tr>
+              <th>Order number</th>
+              <th>Articles</th>
+              <th>Date</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+    
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td>{{ product._id }}</td>
+              <td>{{ product.title }} <img class="article-img" src="{{ product.img }}" alt=""></td>
+              <td>{{ product.date }}</td>
+              <td>{{ product.price }} kr</td>
+            </tr>
+            <tr>
+              <td><strong>Total:</strong></td>
+              <td></td>
+              <td></td>
+              <td>kr</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
